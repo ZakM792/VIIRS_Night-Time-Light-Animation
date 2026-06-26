@@ -63,7 +63,7 @@ All adjustable parameters are centralized in **Cell 3 (Parameter Configuration)*
 
 ---
 
-##Libraries Used
+## Libraries Used
 
 - `earthengine-api` & `geemap` — access and download data from Google Earth Engine
 - `Pillow` — image processing and per-frame annotation drawing
