@@ -2,7 +2,7 @@
 
 Creating an end-to-end temporal night time light visualization with Google Earth Engine and Google Colab
 
-# 🌏 VIIRS Nighttime Lights Indonesia (2016–2025)
+# VIIRS Nighttime Lights Indonesia (2016–2025)
 
 This project generates a 10-year animation of Indonesia's nighttime lights (2016–2025) using VIIRS satellite data from Google Earth Engine. The final outputs are an animated GIF and a 4K MP4 video showing monthly changes in artificial light intensity (cities, roads, industrial zones, etc.) across the entire Indonesian archipelago.
 
@@ -10,10 +10,10 @@ This project generates a 10-year animation of Indonesia's nighttime lights (2016
 
 ---
 
-## 📁 Repository Structure
+## Repository Structure
 
 ```
-📦 root/
+root/
 ├── 01_Script/
 │   └── viirs_nightlights_indonesia_animation.ipynb   # Main notebook
 ├── 02_Output/
@@ -27,7 +27,7 @@ The `01_Script` folder contains the single notebook that drives the entire workf
 
 ---
 
-## ⚙️ How the Notebook Works
+## How the Notebook Works
 
 The notebook runs sequentially through several stages. The first stage handles installation and authentication, where all required Python dependencies (`earthengine-api`, `geemap`, `Pillow`, `imageio`, `moviepy`, and others) are installed automatically, followed by a Google Earth Engine login via a browser popup. This step only needs to be completed once per Colab session.
 
@@ -41,7 +41,7 @@ Finally, all frames are assembled into two outputs: an animated GIF (1000×380 p
 
 ---
 
-## 🚀 How to Use in Google Colab
+## How to Use in Google Colab
 
 **Prerequisite:** You must have an active Google Earth Engine account. If you don't have one yet, register for free at [https://earthengine.google.com](https://earthengine.google.com). Approval typically takes a few minutes to a few hours.
 
@@ -57,13 +57,13 @@ Finally, all frames are assembled into two outputs: an animated GIF (1000×380 p
 
 ---
 
-## 🛠️ Customization
+## Customization
 
 All adjustable parameters are centralized in **Cell 3 (Parameter Configuration)**, so no other cells need to be modified. Commonly changed values include `START_YEAR` and `END_YEAR` to adjust the data range, `VIZ_PARAMS['max']` to control display brightness (a higher value reveals more detail in dimly lit areas), `FRAME_DURATION` to set the GIF playback speed (in milliseconds per frame), and `IMG_WIDTH` to change the GIF resolution (height is calculated automatically based on a geographically corrected aspect ratio).
 
 ---
 
-## 📦 Libraries Used
+## Libraries Used
 
 - `earthengine-api` & `geemap` — access and download data from Google Earth Engine
 - `Pillow` — image processing and per-frame annotation drawing
@@ -74,12 +74,12 @@ All adjustable parameters are centralized in **Cell 3 (Parameter Configuration)*
 
 ---
 
-## 📊 Dataset
+## Dataset
 
 The data source is **NOAA/VIIRS/DNB/MONTHLY_V1/VCMSLCFG**, a monthly composite of nighttime radiance data from the VIIRS (Visible Infrared Imaging Radiometer Suite) sensor, jointly operated by NOAA and NASA. The band visualized is `avg_rad` (average radiance in nanoWatts/cm²/sr). This dataset is publicly available on Google Earth Engine and covers data from 2012 to the present.
 
 ---
 
-## 📝 Credits
+## Credits
 
 Created by **Mahmud Zakariyah** (2026). Data sourced from NOAA VIIRS/DNB via Google Earth Engine. Country border geometries use Natural Earth data (naturalearth.com).
